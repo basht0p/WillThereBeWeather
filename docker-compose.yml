@@ -1,0 +1,15 @@
+services:
+  wtbw-web:
+    build: .
+    container_name: willtherebeweather
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file: .env
+    volumes:
+      - certs:/etc/letsencrypt
+      - cert-logs:/var/log/letsencrypt
+
+volumes:
+  certs:
+  cert-logs:
