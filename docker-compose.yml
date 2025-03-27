@@ -5,7 +5,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    env_file: .env
+    env_file: stack.env
     volumes:
       - certs:/etc/letsencrypt
       - cert-logs:/var/log/letsencrypt
